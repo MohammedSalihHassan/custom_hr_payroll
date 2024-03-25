@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="inherit_custom_account_salary_rule_view_form" model="ir.ui.view">
+        <field name="name">inherit.custom.account.hr.salary.rule.view.form</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="hr_payroll.hr_salary_rule_form"/>
+        <field name="arch" type="xml">
+            <page name="description" position="after">
+                <page name="account" string="Account Line">
+                    <field name="rule_account_line_ids">
+                        <tree editable="bottom" string="Acount">
+                            <field name="account_debit"/>
+                            <field name="debit_avg"/>
+                            <field name="account_credit"/>
+                            <field name="credit_avg"/>
+                            <field name="analytic_account_id"/>
+                        </tree>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
+
+</odoo>
